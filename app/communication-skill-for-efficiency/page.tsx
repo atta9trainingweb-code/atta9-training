@@ -9,10 +9,10 @@ import { TrainerOutcomes } from "@/components/trainer-outcomes";
 import { Activity, Arrow, ClipboardCheck, Graduation, Presentation, Spark, Target, UserFocus, Users } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Communication Skill for Efficiency | ATTA9 Training",
+  title: "Communication Skills for Efficiency and Collaboration | ATTA9 Training",
   description: "หลักสูตรพัฒนาการสื่อสารเพื่อการทำงานอย่างมีประสิทธิภาพ 1 วัน ฝึกสื่อสารให้ชัดเจน ฟังอย่างเข้าอกเข้าใจ สร้างความสัมพันธ์ และลดความผิดพลาดในการประสานงาน",
   openGraph: {
-    title: "Communication Skill for Efficiency",
+    title: "Communication Skills for Efficiency and Collaboration",
     description: "สื่อสารชัด เข้าใจตรงกัน สร้างความร่วมมือที่ดีในทุกการทำงาน",
     images: ["/images/communication-efficiency/hero.jpg"],
   },
@@ -48,7 +48,7 @@ const methodIcons = [Spark, Users, Activity, Presentation, ClipboardCheck, UserF
 
 const gallery = Array.from({ length: 10 }, (_, index) => ({
   src: `/images/communication-efficiency/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt: `บรรยากาศหลักสูตร Communication Skill for Efficiency ภาพที่ ${index + 1}`,
+  alt: `บรรยากาศหลักสูตร Communication Skills for Efficiency and Collaboration ภาพที่ ${index + 1}`,
 }));
 
 export default function CommunicationSkillForEfficiencyPage() {
@@ -61,7 +61,7 @@ export default function CommunicationSkillForEfficiencyPage() {
         <div className="container course-detail-hero-grid">
           <div className="course-detail-hero-copy">
             <p className="communication-hero-kicker">COMMUNICATE WITH IMPACT</p>
-            <h1><span>Communication Skill</span>{" "}<strong>for Efficiency</strong></h1>
+            <h1><span>Communication Skills</span>{" "}<strong>for Efficiency and Collaboration</strong></h1>
             <p className="course-detail-lead">สื่อสารให้ชัด เข้าใจตรงกัน ลดความผิดพลาดในการประสานงาน และสร้างความร่วมมือที่ทำให้ทุกทีมเดินหน้าไปสู่เป้าหมายเดียวกัน</p>
             <div className="course-facts"><div><span>1</span><p><small>DURATION</small>วัน / 6 ชั่วโมง</p></div><div><span>25</span><p><small>CLASS SIZE</small>ไม่เกิน 25 ท่าน</p></div><div><Users /><p><small>FORMAT</small>In-house Training</p></div></div>
             <div className="course-detail-actions"><Link className="button" href="/#contact">ขอรายละเอียดหลักสูตร <Arrow /></Link><a className="button button--ghost" href="#curriculum">ดูหัวข้อการเรียนรู้</a></div>

@@ -2,7 +2,7 @@ export const programs = [
   { title: "Train the Professional Trainer", category: "Leadership", description: "สร้างวิทยากรภายในให้ถ่ายทอดความรู้ได้อย่างมั่นใจและเป็นระบบ", image: "/images/program-trainer.jpg" },
   { title: "Persuasive & Powerful Presentation", category: "Communication", description: "ยกระดับการนำเสนอให้ชัดเจน น่าเชื่อถือ และขับเคลื่อนการตัดสินใจ", image: "/images/program-presentation.jpg" },
   { title: "Professional Facilitator", category: "Facilitation", description: "พัฒนาทักษะการนำวงสนทนาและสร้างการมีส่วนร่วมในทีม", image: "/images/program-facilitator.jpg" },
-  { title: "Communication Skill for Efficiency", category: "People Skills", description: "สื่อสารและประสานงานข้ามทีมให้เข้าใจตรงกันและทำงานได้คล่องขึ้น", image: "/images/program-communication.jpg" },
+  { title: "Communication Skills for Efficiency and Collaboration", category: "People Skills", description: "สื่อสารและประสานงานข้ามทีมให้เข้าใจตรงกันและทำงานได้คล่องขึ้น", image: "/images/program-communication.jpg" },
   { title: "Effective Complaint Handling", category: "Service", description: "รับมือข้อร้องเรียนอย่างมืออาชีพและเปลี่ยนสถานการณ์ยากให้เป็นความเชื่อมั่น", image: "/images/program-service.webp" },
 ];
 

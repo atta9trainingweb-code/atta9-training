@@ -23,6 +23,12 @@ const process = [
   ["Apply", "นำไปใช้กับงานจริง", "สนับสนุนให้ผู้เรียนเห็นแนวทางประยุกต์ใช้หลังการอบรม"],
 ];
 
+const expertSignals = [
+  { icon: Users, title: "หลักสูตรทันสมัย", text: "เชื่อมกับงานวันนี้" },
+  { icon: Target, title: "ออกแบบเฉพาะองค์กร", text: "ปรับตามบริบทจริง" },
+  { icon: Chart, title: "มุ่งสู่การนำไปใช้", text: "ต่อยอดหลังอบรม" },
+];
+
 function SectionHeading({ eyebrow, title, intro, align = "left" }: { eyebrow: string; title: string; intro?: string; align?: "left" | "center" }) {
   return <div className={`section-heading section-heading--${align}`}><p className="eyebrow"><span/>{eyebrow}</p><h2>{title}</h2>{intro && <p className="section-intro">{intro}</p>}</div>;
 }
@@ -52,21 +58,24 @@ export default function Home() {
             src="/images/hero-phakorn-cutout.png"
             width={1197}
             height={1315}
-            sizes="(max-width: 767px) 78vw, (max-width: 1100px) 58vw, 48vw"
+            sizes="(max-width: 767px) 122vw, (max-width: 1100px) 58vw, 48vw"
             priority
             alt="อาจารย์พากร อัตตนนท์ วิทยากร ATTA9 กำลังบรรยาย"
           />
         </div>
-        <div className="container hero-content">
-          <p className="hero-kicker">IN-HOUSE TRAINING FOR ORGANIZATIONAL IMPACT</p>
-          <h1>Empower Your People.<span className="hero-heading-line"><strong>Elevate</strong> Your Organization.</span></h1>
-          <p className="hero-copy">ออกแบบการเรียนรู้จากโจทย์จริงขององค์กร<br/>เพื่อให้บุคลากรนำไปใช้และสร้างการเปลี่ยนแปลงในการทำงาน</p>
-          <div className="hero-benefits">
-            <div><Users/><p><strong>หลักสูตรทันสมัย</strong><span>เชื่อมกับงานวันนี้</span></p></div>
-            <div><Target/><p><strong>ออกแบบเฉพาะองค์กร</strong><span>ปรับตามบริบทจริง</span></p></div>
-            <div><Chart/><p><strong>มุ่งสู่การนำไปใช้</strong><span>ต่อยอดหลังอบรม</span></p></div>
+        <div className="container hero-content hero-profile-content">
+          <p className="hero-kicker">REAL-WORLD LEARNING • REAL IMPACT</p>
+          <h1 className="hero-profile-name"><span>อ.พากร</span><strong>อัตตนนท์</strong></h1>
+          <p className="hero-profile-name-en">Phakorn Attanon</p>
+          <div className="hero-profile-roles">
+            <p>Trainer <span>|</span> Facilitator <span>|</span> Coach</p>
+            <p>Leadership <span>•</span> Communication <span>•</span> Presentation <span>•</span> Service</p>
           </div>
-          <div className="hero-actions"><a className="button" href="#programs">ดูหลักสูตรของเรา <Arrow/></a><a className="button button--ghost" href="#contact">ขอคำปรึกษา <Arrow/></a></div>
+          <div className="hero-experience">
+            <strong>20+</strong>
+            <span>ปีของประสบการณ์<br/>ด้านงานบริการและการฝึกอบรม</span>
+          </div>
+          <div className="hero-actions"><Link className="button" href="/trainer-profile">TRAINER PROFILE <Arrow/></Link><a className="button button--ghost" href="#contact">CONTACT US <Arrow/></a></div>
         </div>
         <div className="container trust-wrap"><CustomerLogos /></div>
       </section>
@@ -75,13 +84,13 @@ export default function Home() {
 
       <section className="section programs" id="programs"><div className="container"><div className="section-top"><SectionHeading eyebrow="COURSES & PROGRAMS" title="เลือกหลักสูตรจากความท้าทายขององค์กร"/><Link className="text-link desktop-only" href="/training-program">ดูหลักสูตรทั้งหมด <Arrow/></Link></div><div className="program-track" aria-label="หลักสูตรแนะนำ">{programs.map((item, i) => <article className="program-card" key={item.title}><div className="program-media"><Image src={item.image} fill sizes="(max-width: 767px) 84vw, (max-width: 1279px) 46vw, 31vw" alt={`บรรยากาศหลักสูตร ${item.title}`}/><span>{item.category}</span></div><div className="program-body"><p>PROGRAM {String(i + 1).padStart(2, "0")}</p><h3>{item.title}</h3><p>{item.description}</p><Link href="/training-program" aria-label={`ดูรายละเอียดหลักสูตร ${item.title}`}><span>รายละเอียดหลักสูตร</span><Arrow/></Link></div></article>)}</div><Link className="text-link mobile-only" href="/training-program">ดูหลักสูตรทั้งหมด <Arrow/></Link></div></section>
 
-      <section className="section process-section" id="process"><div className="container process-layout"><div className="process-photo"><Image src="/images/pakorn-workshop.webp" fill sizes="(max-width: 1023px) 100vw, 46vw" alt="อาจารย์พากร อรรถนนท์ กำลังดำเนินกิจกรรมเวิร์กช็อปกับผู้เข้าร่วม"/><div className="photo-note"><span>LEARNING IN ACTION</span><strong>กิจกรรมที่เชื่อมกับสถานการณ์จริง</strong></div></div><div><SectionHeading eyebrow="IN-HOUSE APPROACH" title="จากโจทย์ธุรกิจ สู่การเรียนรู้ที่นำไปใช้ได้จริง" intro="กระบวนการออกแบบที่เชื่อมเป้าหมายขององค์กรเข้ากับประสบการณ์เรียนรู้ของผู้เข้าร่วม"/><ol className="process-list">{process.map(([en, title, text], i) => <li key={en}><span>{String(i + 1).padStart(2, "0")}</span><div><small>{en}</small><h3>{title}</h3><p>{text}</p></div></li>)}</ol></div></div></section>
+      <section className="section process-section" id="process"><div className="container process-layout"><div className="process-photo"><Image src="/images/in-house-approach-workshop-v2.jpg" fill sizes="(max-width: 1023px) 100vw, 46vw" alt="อาจารย์พากรกำลังดูแลผู้เข้าร่วมระหว่างกิจกรรมเวิร์กช็อปกลุ่ม"/><div className="photo-note"><span>LEARNING IN ACTION</span><strong>กิจกรรมที่เชื่อมกับสถานการณ์จริง</strong></div></div><div><SectionHeading eyebrow="IN-HOUSE APPROACH" title="จากโจทย์ธุรกิจ สู่การเรียนรู้ที่นำไปใช้ได้จริง" intro="กระบวนการออกแบบที่เชื่อมเป้าหมายขององค์กรเข้ากับประสบการณ์เรียนรู้ของผู้เข้าร่วม"/><ol className="process-list">{process.map(([en, title, text], i) => <li key={en}><span>{String(i + 1).padStart(2, "0")}</span><div><small>{en}</small><h3>{title}</h3><p>{text}</p></div></li>)}</ol></div></div></section>
 
       <section className="impact-band"><div className="container impact-grid"><div className="impact-lead"><p>ATTA9 PRINCIPLE</p><h2>People · Performance · Purpose</h2></div><div><Users/><strong>People</strong><span>เริ่มจากผู้เรียนและบริบทจริง</span></div><div><Target/><strong>Performance</strong><span>เชื่อมทักษะกับการทำงาน</span></div><div><Spark/><strong>Purpose</strong><span>มุ่งสู่เป้าหมายขององค์กร</span></div></div></section>
 
       <section className="section cases" id="cases"><div className="container"><SectionHeading eyebrow="REAL LEARNING MOMENTS" title="บรรยากาศการเรียนรู้จากงานจริง" intro="ตัวอย่างภาพจากการจัดอบรมของ ATTA9 ที่สะท้อนการมีส่วนร่วมและการเรียนรู้ร่วมกัน"/><div className="case-grid"><article className="case-card case-card--wide"><Image src="/images/program-facilitator-retouched.png" fill sizes="(max-width: 767px) 100vw, 60vw" alt="วิทยากรกำลังให้คำแนะนำระหว่างกิจกรรมกลุ่ม"/><div><span>FACILITATION</span><h3>เรียนรู้ผ่านการสนทนาและลงมือทำ</h3></div></article><article className="case-card"><Image src="/images/program-communication-retouched.png" fill sizes="(max-width: 767px) 100vw, 35vw" alt="ผู้เข้าร่วมทำกิจกรรมการสื่อสารร่วมกัน"/><div><span>TEAM LEARNING</span><h3>สร้างพื้นที่ให้ทีมได้คิดและแลกเปลี่ยน</h3></div></article></div></div></section>
 
-      <section className="section expert" id="expert"><div className="container expert-grid"><div><SectionHeading eyebrow="MEET THE TRAINER" title="เรียนรู้กับผู้เชี่ยวชาญที่เข้าใจโลกการทำงานจริง"/><p className="expert-copy">การเรียนรู้ที่ทรงพลังไม่ได้เกิดจากการบอกเพียงอย่างเดียว แต่เกิดจากคำถามที่ดี ประสบการณ์ที่เกี่ยวข้อง และพื้นที่ที่ทำให้ผู้เรียนกล้าลองคิดและลงมือทำ</p><div className="quote">“พาผู้เรียนเห็นศักยภาพของตัวเอง และเปลี่ยนความเข้าใจให้เป็นการลงมือทำ”</div><Link className="button button--dark" href="/trainer-profile">ดูประวัติวิทยากร <Arrow/></Link></div><div className="expert-card"><div className="expert-photo"><Image src="/images/phakorn-profile.webp" fill sizes="(max-width: 767px) 100vw, 42vw" alt="อาจารย์พากร อัตตนนท์ วิทยากร ATTA9"/></div><div><p>LEAD TRAINER</p><h3>Phakorn Attanon</h3><span>Train the Trainer · Presentation · Communication</span></div></div></div></section>
+      <section className="section expert" id="expert"><div className="container"><div className="expert-grid"><div className="expert-intro"><div className="expert-heading"><p className="eyebrow"><span/>MEET THE TRAINER</p><h2><span>เรียนรู้กับผู้เชี่ยวชาญที่</span><strong>เข้าใจโลกการทำงานจริง</strong></h2></div><p className="expert-copy">การเรียนรู้ที่ทรงพลังไม่ได้เกิดจากการบอกเพียงอย่างเดียว แต่เกิดจากคำถามที่ดี ประสบการณ์ที่เกี่ยวข้อง และพื้นที่ที่ทำให้ผู้เรียนกล้าลองคิดและลงมือทำ</p><ul className="expert-signals" aria-label="แนวทางการออกแบบการเรียนรู้ของ ATTA9">{expertSignals.map(({ icon: Icon, title, text }) => <li key={title}><Icon/><span><strong>{title}</strong><small>{text}</small></span></li>)}</ul><div className="quote">“พาผู้เรียนเห็นศักยภาพของตัวเอง และเปลี่ยนความเข้าใจให้เป็นการลงมือทำ”</div><Link className="button button--dark expert-profile-button" href="/trainer-profile">TRAINER PROFILE <Arrow/></Link></div><div className="expert-card"><div className="expert-photo"><Image src="/images/phakorn-profile.webp" fill sizes="(max-width: 767px) 100vw, 36vw" alt="อาจารย์พากร อัตตนนท์ วิทยากร ATTA9"/></div><div><p>LEAD TRAINER</p><h3>Phakorn Attanon</h3><span>Trainer | Facilitator | Coach<br />Leadership • Communication • Presentation • Service</span></div></div></div></div></section>
 
       <section className="section insights" id="insights"><div className="container"><SectionHeading eyebrow="INSIGHTS FOR ORGANIZATIONS" title="มุมคิดเพื่อการพัฒนาคนและองค์กร" align="center"/><div className="insight-grid"><article><span>LEADERSHIP</span><h3>หัวหน้างานยุคใหม่ควรสร้างพื้นที่ให้ทีมเรียนรู้อย่างไร</h3><p>แนวคิดสำหรับเปลี่ยนการสั่งงานให้เป็นบทสนทนาที่ช่วยให้ทีมคิดและเติบโต</p><a href="#contact">ขอคำแนะนำหัวข้อนี้ <Arrow/></a></article><article><span>COMMUNICATION</span><h3>ทำไมการสื่อสารในทีมจึงต้องเริ่มจากบริบทที่ตรงกัน</h3><p>สำรวจจุดที่ทำให้การประสานงานติดขัด และวิธีออกแบบการเรียนรู้ให้ใกล้กับงานจริง</p><a href="#contact">ขอคำแนะนำหัวข้อนี้ <Arrow/></a></article><article><span>LEARNING DESIGN</span><h3>ออกแบบ In-house Training อย่างไรให้คนอยากมีส่วนร่วม</h3><p>จากโจทย์องค์กร สู่กิจกรรมที่ทำให้ผู้เรียนได้คิด ทดลอง และเห็นวิธีนำไปใช้</p><a href="#contact">ขอคำแนะนำหัวข้อนี้ <Arrow/></a></article></div></div></section>
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Persuasive & Powerful Presentation",
     description: "นำเสนออย่างมั่นใจ กระชับ ตรงประเด็น และโน้มน้าวผู้ฟังให้พร้อมตัดสินใจ",
-    images: ["/images/persuasive-presentation/hero-presentation.png"],
+    images: ["/images/persuasive-presentation/hero-presentation-seminar-v2.png"],
   },
 };
 
@@ -65,7 +65,7 @@ export default function PersuasivePowerfulPresentationPage() {
     <Header />
     <main>
       <section className="course-detail-hero presentation-hero" id="top">
-        <Image className="course-detail-hero-image" src="/images/persuasive-presentation/hero-presentation.png" fill preload quality={100} sizes="100vw" alt="วิทยากรกำลังถ่ายทอดทักษะการนำเสนอต่อผู้เข้าอบรม" />
+        <Image className="course-detail-hero-image" src="/images/persuasive-presentation/hero-presentation-seminar-v2.png" fill preload quality={100} sizes="100vw" alt="อาจารย์พากรกำลังถ่ายทอดทักษะการนำเสนอบนเวทีในห้องสัมมนา" />
         <div className="course-detail-hero-overlay" />
         <div className="container course-detail-hero-grid">
           <div className="course-detail-hero-copy">
