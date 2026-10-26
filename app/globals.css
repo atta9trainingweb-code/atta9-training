@@ -269,6 +269,10 @@ footer{background:#020f24;color:white;padding:68px 0 24px}.footer-grid{display:g
 /* Keep all three participants visible in the feedback learning-design photo. */
 .feedback-learning .trainer-learning-photo{min-height:0;aspect-ratio:3/2}
 
+/* Show the complete 4:3 classroom scene in the Train the Trainer learning-design panel. */
+.trainer-learning-photo--full-frame{min-height:0;aspect-ratio:4/3;background:var(--gray-50)}
+.trainer-learning-photo--full-frame img{object-fit:contain}
+
 /* Smart Personality hero keeps the complete etiquette table in frame. */
 .personality-hero{background:#020912}
 .personality-hero>.course-detail-hero-image{object-fit:contain;object-position:right center}
