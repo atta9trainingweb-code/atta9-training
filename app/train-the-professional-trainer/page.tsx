@@ -44,21 +44,22 @@ const problemIcons = [BookOpen, Spark, Users, Target];
 const methodIcons = [Spark, Users, UserFocus, Target, Activity, Presentation, Users, Activity, Presentation, BookOpen, ClipboardCheck];
 
 const gallery = [
-  { src: "/images/train-the-trainer/hero.jpg", alt: "กิจกรรมสร้างการมีส่วนร่วมในห้องเรียน" },
-  { src: "/images/train-the-trainer/workshop-wide.jpg", alt: "วิทยากรกำลังนำกิจกรรมฝึกปฏิบัติ" },
-  { src: "/images/train-the-trainer/practice.jpg", alt: "ผู้เข้าอบรมฝึกออกแบบการเรียนรู้ร่วมกัน" },
   { src: "/images/train-the-trainer/gallery-04.jpg", alt: "ผู้เข้าอบรมฝึกถ่ายทอดเนื้อหา" },
   { src: "/images/train-the-trainer/gallery-05.jpg", alt: "กิจกรรมกลุ่มสำหรับวิทยากรภายใน" },
-  { src: "/images/train-the-trainer/gallery-06.jpg", alt: "การฝึกนำเสนอหน้าชั้นเรียน" },
-  { src: "/images/train-the-trainer/gallery-07.jpg", alt: "กิจกรรมการเรียนรู้แบบมีส่วนร่วม" },
   { src: "/images/train-the-trainer/gallery-08.jpg", alt: "เวิร์กช็อปฝึกทักษะการสอน" },
   { src: "/images/train-the-trainer/gallery-09.jpg", alt: "การฝึกบุคลิกภาพและการสื่อสาร" },
   { src: "/images/train-the-trainer/gallery-10.jpg", alt: "กิจกรรมกลุ่มและการแลกเปลี่ยนความคิดเห็น" },
   { src: "/images/train-the-trainer/gallery-11.jpg", alt: "ผู้เข้าอบรมฝึกปฏิบัติจริง" },
-  { src: "/images/train-the-trainer/gallery-12.jpg", alt: "วิทยากรให้คำแนะนำระหว่างกิจกรรม" },
   { src: "/images/train-the-trainer/gallery-13.jpg", alt: "การฝึกออกแบบสื่อการสอน" },
   { src: "/images/train-the-trainer/gallery-14.jpg", alt: "การเรียนรู้ผ่านกิจกรรมในองค์กร" },
   { src: "/images/train-the-trainer/gallery-bags.webp", alt: "ผู้เข้าอบรมฝึกออกแบบกระบวนการเรียนรู้" },
+  { src: "/images/train-the-trainer/learning-action-01.jpg", alt: "ผู้เข้าอบรมฝึกนำเสนอและสาธิตต่อหน้ากลุ่ม" },
+  { src: "/images/train-the-trainer/learning-action-02.jpg", alt: "ผู้เข้าอบรมร่วมกันออกแบบกิจกรรมบนกระดาษฟลิปชาร์ต" },
+  { src: "/images/train-the-trainer/learning-action-03.jpg", alt: "ผู้เข้าอบรมฝึกถ่ายทอดเนื้อหาต่อหน้าชั้นเรียน" },
+  { src: "/images/train-the-trainer/learning-action-04.jpg", alt: "กิจกรรมฝึกสื่อสารและนำเสนอร่วมกันในห้องอบรม" },
+  { src: "/images/train-the-trainer/learning-action-05.jpg", alt: "ผู้เข้าอบรมทำกิจกรรมกลุ่มร่วมกับวิทยากร" },
+  { src: "/images/train-the-trainer/learning-action-06.jpg", alt: "ผู้เข้าอบรมฝึกสาธิตและแลกเปลี่ยนความคิดเห็น" },
+  { src: "/images/train-the-trainer/learning-action-07.jpg", alt: "ผู้เข้าอบรมฝึกพูดและถ่ายทอดต่อหน้ากลุ่ม" },
 ];
 
 export default function TrainTheProfessionalTrainerPage() {
@@ -84,7 +85,7 @@ export default function TrainTheProfessionalTrainerPage() {
 
       <section className="section trainer-curriculum" id="curriculum"><div className="container"><div className="trainer-section-head trainer-section-head--light"><div><p className="eyebrow"><span/>COURSE CURRICULUM</p><h2>หัวข้อในการเรียนรู้</h2></div><p>โครงสร้างเนื้อหาครบตั้งแต่พื้นฐานการเป็นวิทยากร จิตวิทยาการสอน การบริหารเนื้อหา เทคนิคการถ่ายทอด ไปจนถึง Lesson Plan และ Assessment</p></div><TrainerCurriculum modules={modules}/></div></section>
 
-      <section className="section trainer-learning-design"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/train-the-trainer/practice.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="กิจกรรมฝึกทักษะในหลักสูตรวิทยากรมืออาชีพ"/><div><Spark/><span>Skillset <b>+</b> Mindset</span></div></div><div><p className="eyebrow"><span/>LEARNING DESIGN</p><h2>สมดุลทั้งทักษะ<br/>และทัศนคติ</h2><div className="trainer-learning-block"><span><Target/></span><div><h3>Skillset</h3><p>ฝึกแบบกลุ่มเล็กสามมิติ (Triad) สลับบทบาทผู้สอน ผู้เรียน และผู้สังเกตการณ์ พร้อมฝึกสอนเสมือนจริง อัดวิดีโอ รับ Feedback รายบุคคล และใช้ Coaching เพื่อประเมินตนเอง</p></div></div><div className="trainer-learning-block"><span><Spark/></span><div><h3>Mindset</h3><p>ปรับทัศนคติให้เห็นความสำคัญของการเรียนรู้ เปิดใจ ออกจาก Comfort Zone และสร้างความมั่นใจผ่านกิจกรรมที่หลากหลาย ในบรรยากาศสนุก เป็นกันเอง และให้กำลังใจกัน</p></div></div></div></div></section>
+      <section className="section trainer-learning-design"><div className="container trainer-learning-layout"><div className="trainer-learning-photo trainer-learning-photo--full-frame"><Image src="/images/train-the-trainer/learning-design-presentation.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="ผู้เข้าอบรมฝึกถ่ายทอดต่อหน้าชั้นเรียนในหลักสูตรวิทยากรมืออาชีพ"/><div><Spark/><span>Skillset <b>+</b> Mindset</span></div></div><div><p className="eyebrow"><span/>LEARNING DESIGN</p><h2>สมดุลทั้งทักษะ<br/>และทัศนคติ</h2><div className="trainer-learning-block"><span><Target/></span><div><h3>Skillset</h3><p>ฝึกแบบกลุ่มเล็กสามมิติ (Triad) สลับบทบาทผู้สอน ผู้เรียน และผู้สังเกตการณ์ พร้อมฝึกสอนเสมือนจริง อัดวิดีโอ รับ Feedback รายบุคคล และใช้ Coaching เพื่อประเมินตนเอง</p></div></div><div className="trainer-learning-block"><span><Spark/></span><div><h3>Mindset</h3><p>ปรับทัศนคติให้เห็นความสำคัญของการเรียนรู้ เปิดใจ ออกจาก Comfort Zone และสร้างความมั่นใจผ่านกิจกรรมที่หลากหลาย ในบรรยากาศสนุก เป็นกันเอง และให้กำลังใจกัน</p></div></div></div></div></section>
 
       <section className="trainer-methods"><div className="container trainer-methods-grid"><div><p>TRAINING METHODS</p><h2>เครื่องมือที่ใช้<br/>ตลอด 3 วัน</h2></div><div className="trainer-method-cloud">{methods.map((method,index)=>{const Icon=methodIcons[index];return <span key={method}><Icon/>{method}</span>;})}</div></div></section>
 
