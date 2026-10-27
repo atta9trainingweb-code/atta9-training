@@ -52,10 +52,16 @@ const methods = ["Triad Practice", "Presentation Practice", "VDO Recording", "In
 const methodIcons = [Users, Presentation, Activity, UserFocus, Spark, Users, ClipboardCheck, Target, Presentation, BookOpen];
 
 const gallery = [
-  ...Array.from({ length: 10 }, (_, index) => ({
-    src: `/images/persuasive-presentation/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-    alt: `บรรยากาศหลักสูตร Persuasive & Powerful Presentation ภาพที่ ${index + 1}`,
+  ...[1, 2, 3, 4].map((imageNumber) => ({
+    src: `/images/persuasive-presentation/gallery-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: `บรรยากาศหลักสูตร Persuasive & Powerful Presentation ภาพที่ ${imageNumber}`,
   })),
+  { src: "/images/persuasive-presentation/gallery-13.jpg", alt: "ผู้เข้าอบรมฝึกนำเสนอพร้อมไมโครโฟนหน้าชั้นเรียน" },
+  ...[6, 7, 8, 9].map((imageNumber) => ({
+    src: `/images/persuasive-presentation/gallery-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: `บรรยากาศหลักสูตร Persuasive & Powerful Presentation ภาพที่ ${imageNumber}`,
+  })),
+  { src: "/images/persuasive-presentation/gallery-14.jpg", alt: "ผู้เข้าอบรมฝึกนำเสนองานต่อหน้าผู้ฟัง" },
   { src: "/images/persuasive-presentation/gallery-11.webp", alt: "สื่อประกอบหลักสูตร Persuasive & Powerful Presentation" },
   { src: "/images/persuasive-presentation/gallery-12.jpg", alt: "ผู้เข้าอบรมฝึกนำเสนอและรับคำแนะนำจากวิทยากร" },
 ];
@@ -92,7 +98,7 @@ export default function PersuasivePowerfulPresentationPage() {
 
       <section className="section trainer-learning-design presentation-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/persuasive-presentation/gallery-02.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="ผู้เข้าอบรมฝึกนำเสนอโดยมีวิทยากรให้คำแนะนำ" /><div><Presentation /><span>Practice <b>+</b> Feedback</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>ฝึกจริง เห็นตัวเองจริง<br />และพัฒนาได้ตรงจุด</h2><p className="presentation-learning-intro">การเรียนรู้ถูกออกแบบให้สมดุลทั้ง Skillset และ Mindset เพื่อให้ผู้เรียนกล้าลอง เห็นผลของวิธีสื่อสารแต่ละแบบ และนำข้อเสนอแนะไปปรับใช้ได้ทันที</p><div className="trainer-learning-block"><span><Activity /></span><div><h3>Simulation &amp; VDO Review</h3><p>ฝึกนำเสนอหน้าคลาสกับผู้ฟังกลุ่มใหญ่ในสถานการณ์เสมือนจริง พร้อมบันทึกวิดีโอเพื่อมองเห็นจุดแข็งและจุดที่ควรพัฒนาอย่างชัดเจน</p></div></div><div className="trainer-learning-block"><span><UserFocus /></span><div><h3>Individual Feedback &amp; Coaching</h3><p>รับ Feedback รายบุคคลจากผู้สอน สลับบทบาทผู้พูด ผู้ฟัง และผู้สังเกตการณ์ในกลุ่ม Triad ก่อนสรุปเป็น Action Plan ของตนเอง</p></div></div></div></div></section>
 
-      <section className="story-photo-pair presentation-photo-pair"><div className="story-photo"><Image src="/images/persuasive-presentation/gallery-03.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมฝึกครองเวทีและสื่อสารกับผู้ฟัง" /><span>Speak with confidence</span></div><div className="story-photo"><Image src="/images/persuasive-presentation/gallery-05.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="กิจกรรมกลุ่มเพื่อฝึกเรียบเรียงและสื่อสารแนวคิด" /><span>Move people to action</span></div></section>
+      <section className="story-photo-pair presentation-photo-pair"><div className="story-photo"><Image src="/images/persuasive-presentation/gallery-03.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมฝึกครองเวทีและสื่อสารกับผู้ฟัง" /><span>Speak with confidence</span></div><div className="story-photo"><Image src="/images/persuasive-presentation/move-people-to-action.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมฝึกนำเสนอหน้าชั้นเรียนขณะเพื่อนบันทึกวิดีโอ" /><span>Move people to action</span></div></section>
 
       <section className="trainer-methods"><div className="container trainer-methods-grid"><div><p>TRAINING METHODS</p><h2>เรียนรู้ผ่านการลงมือ<br />และข้อเสนอแนะที่เฉพาะตัว</h2></div><div className="trainer-method-cloud">{methods.map((method, index) => { const Icon = methodIcons[index]; return <span key={method}><Icon />{method}</span>; })}</div></div></section>
 

@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdminHeader } from "@/components/admin-header";
 import {
   contactStatuses,
   contactStatusLabels,
@@ -25,7 +24,7 @@ function formatDate(value: string) {
 export default async function ContactPage({ params, searchParams }: ContactPageProps) {
   const { id } = await params;
   const query = await searchParams;
-  const { supabase } = await requireAdmin();
+  const { supabase, user, admin } = await requireAdmin();
   const { data } = await supabase.from("contacts").select("*").eq("id", id).maybeSingle();
 
   if (!data) notFound();
@@ -34,10 +33,7 @@ export default async function ContactPage({ params, searchParams }: ContactPageP
 
   return (
     <main className="admin-shell admin-detail-shell">
-      <header className="admin-header">
-        <Link className="admin-logo" href="/admin/contacts"><Image src="/images/atta9-logo-on-dark.png" width={510} height={263} alt="ATTA9 Training" priority /></Link>
-        <Link className="admin-back" href="/admin/contacts">← กลับหน้ารายชื่อ</Link>
-      </header>
+      <AdminHeader displayName={admin.display_name || user.email || "ผู้ดูแลระบบ"} active="contacts" />
       <div className="admin-content admin-detail-content">
         {query.saved && <div className="admin-saved" role="status">บันทึกการเปลี่ยนแปลงแล้ว</div>}
         <div className="admin-detail-heading">
@@ -67,14 +63,14 @@ export default async function ContactPage({ params, searchParams }: ContactPageP
 
           <section className="admin-detail-card admin-followup-card">
             <h2>การติดตาม</h2>
-            <form action={updateContact}>
+            <form action={updateContact} noValidate>
               <input type="hidden" name="id" value={contact.id} />
               <label htmlFor="contact-status">สถานะ</label>
               <select id="contact-status" name="status" defaultValue={contact.status}>
                 {contactStatuses.map((status) => <option key={status} value={status}>{contactStatusLabels[status]}</option>)}
               </select>
               <label htmlFor="admin-note">บันทึกสำหรับทีมงาน</label>
-              <textarea id="admin-note" name="admin_note" rows={7} defaultValue={contact.admin_note || ""} placeholder="เช่น ติดต่อแล้ว รอส่งใบเสนอราคา..." />
+              <textarea className="resize-none" id="admin-note" name="admin_note" rows={7} defaultValue={contact.admin_note || ""} placeholder="เช่น ติดต่อแล้ว รอส่งใบเสนอราคา..." />
               <button className="admin-primary-button" type="submit">บันทึกการติดตาม</button>
             </form>
           </section>

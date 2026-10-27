@@ -50,10 +50,43 @@ const modules = [
 const methods = ["Triad Practice", "Coaching", "Role Play", "Case Study", "Workshop", "Group Activity", "Game", "VDO Clip", "Reflection", "Action Plan"];
 const methodIcons = [Users, UserFocus, Presentation, BookOpen, ClipboardCheck, Activity, Spark, Presentation, UserFocus, Target];
 
-const gallery = Array.from({ length: 12 }, (_, index) => ({
-  src: `/images/inspiring-coach/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt: `บรรยากาศหลักสูตร Leader as an Inspiring Coach ภาพที่ ${index + 1}`,
-}));
+const hiddenGalleryImages = new Set([3, 4, 6, 7, 12]);
+const gallery = [
+  ...Array.from({ length: 12 }, (_, index) => index + 1)
+    .filter((imageNumber) => !hiddenGalleryImages.has(imageNumber))
+    .map((imageNumber) => ({
+      src: `/images/inspiring-coach/gallery-${String(imageNumber).padStart(2, "0")}.jpg`,
+      alt: `บรรยากาศหลักสูตร Leader as an Inspiring Coach ภาพที่ ${imageNumber}`,
+    })),
+  {
+    src: "/images/inspiring-coach/gallery-13.jpg",
+    alt: "ผู้เข้าอบรมฝึกสนทนาเพื่อพัฒนาทักษะการโค้ชเป็นคู่",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-14.jpg",
+    alt: "ผู้เข้าอบรมแลกเปลี่ยนมุมมองจากกิจกรรมกลุ่ม",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-15.jpg",
+    alt: "วิทยากรฝึกบทสนทนาการโค้ชกับผู้เข้าอบรม",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-16.jpg",
+    alt: "ผู้เข้าอบรมฝึกสื่อสารและรับฟังความคิดเห็นในกลุ่มย่อย",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-17.jpg",
+    alt: "ผู้เข้าอบรมฝึกบทสนทนาการโค้ชร่วมกับวิทยากร",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-18.jpg",
+    alt: "วิทยากรสังเกตและให้คำแนะนำระหว่างการฝึกโค้ช",
+  },
+  {
+    src: "/images/inspiring-coach/gallery-19.jpg",
+    alt: "วิทยากรสาธิตเทคนิคการสื่อสารกับผู้เข้าอบรม",
+  },
+];
 
 export default function LeaderAsAnInspiringCoachPage() {
   return <>
@@ -87,7 +120,7 @@ export default function LeaderAsAnInspiringCoachPage() {
 
       <section className="section trainer-learning-design coach-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/inspiring-coach/gallery-05.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="วิทยากรสังเกตและให้คำแนะนำระหว่างกิจกรรมฝึกโค้ช" /><div><UserFocus /><span>Skillset <b>+</b> Mindset</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>สลับมุมมอง<br />เพื่อเข้าใจทั้งผู้นำและผู้รับการโค้ช</h2><p className="coach-learning-intro">การเรียนรู้ที่นำไปใช้ได้จริงต้องสมดุลทั้งทักษะและทัศนคติ ผู้เรียนจึงได้ทดลอง สนทนา สังเกต และสะท้อนตนเองในบรรยากาศที่เปิดใจและให้กำลังใจกัน</p><div className="trainer-learning-block"><span><Presentation /></span><div><h3>Triad Practice</h3><p>ฝึกเป็นกลุ่มเล็กสามมิติ สลับบทบาทผู้นำ ลูกน้อง และผู้สังเกตการณ์ เพื่อเห็นผลของคำถาม การฟัง และการ Feedback ผ่านหลายมุมมอง</p></div></div><div className="trainer-learning-block"><span><Spark /></span><div><h3>Mindset &amp; Reflection</h3><p>ใช้ Ice Breaking, Intention Setting, Coaching และ Action Plan เพื่อเปิดใจ ลดอีโก้ กล้าออกจาก Comfort Zone และพร้อมนำสิ่งที่ค้นพบไปใช้จริง</p></div></div></div></div></section>
 
-      <section className="story-photo-pair coach-photo-pair"><div className="story-photo"><Image src="/images/inspiring-coach/gallery-10.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรสื่อสารกับกลุ่มผู้เข้าอบรมอย่างใกล้ชิด" /><span>Listen without judgment</span></div><div className="story-photo"><Image src="/images/inspiring-coach/gallery-12.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมทำกิจกรรมร่วมกันอย่างมีพลัง" /><span>Unlock team potential</span></div></section>
+      <section className="story-photo-pair coach-photo-pair"><div className="story-photo"><Image src="/images/inspiring-coach/gallery-10.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรสื่อสารกับกลุ่มผู้เข้าอบรมอย่างใกล้ชิด" /><span>Listen without judgment</span></div><div className="story-photo"><Image src="/images/inspiring-coach/unlock-team-potential.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมร่วมกันวิเคราะห์และวางแผนกิจกรรมพัฒนาศักยภาพทีม" /><span>Unlock team potential</span></div></section>
 
       <section className="trainer-methods"><div className="container trainer-methods-grid"><div><p>TRAINING METHODS</p><h2>เข้าใจผ่านประสบการณ์<br />เปลี่ยนผ่านการลงมือทำ</h2></div><div className="trainer-method-cloud">{methods.map((method, index) => { const Icon = methodIcons[index]; return <span key={method}><Icon />{method}</span>; })}</div></div></section>
 

@@ -34,7 +34,7 @@ export async function login(_state: LoginState, formData: FormData): Promise<Log
     return { error: "บัญชีนี้ไม่มีสิทธิ์เข้าถึงระบบหลังบ้าน" };
   }
 
-  redirect("/admin/contacts");
+  redirect("/admin/portfolio");
 }
 
 export async function logout() {

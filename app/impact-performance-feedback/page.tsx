@@ -46,10 +46,16 @@ const modules = [
 const methods = ["Triad Practice", "Role Play", "Performance Feedback", "Coaching", "Empathic Listening", "GROW Model", "Case Study", "Group Activity", "Workshop", "Reflection", "Action Plan"];
 const methodIcons = [Users, UserFocus, Presentation, Spark, Activity, Target, BookOpen, Users, ClipboardCheck, UserFocus, Target];
 
-const gallery = Array.from({ length: 12 }, (_, index) => ({
-  src: `/images/impact-performance-feedback/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt: `บรรยากาศหลักสูตร Impact Performance Feedback ภาพที่ ${index + 1}`,
-}));
+const gallery = [
+  ...[1, 2, 3, 5, 6, 7, 9, 10, 12].map((imageNumber) => ({
+    src: `/images/impact-performance-feedback/gallery-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: `บรรยากาศหลักสูตร Impact Performance Feedback ภาพที่ ${imageNumber}`,
+  })),
+  { src: "/images/impact-performance-feedback/gallery-13.jpg", alt: "ผู้เข้าอบรมฝึกสนทนา Feedback แบบกลุ่มย่อย" },
+  { src: "/images/impact-performance-feedback/gallery-14.jpg", alt: "ผู้เข้าอบรมฝึกให้ Feedback ต่อหน้าชั้นเรียน" },
+  { src: "/images/impact-performance-feedback/gallery-15.jpg", alt: "ผู้เข้าอบรมฝึกสนทนาเพื่อพัฒนาผลงาน" },
+  { src: "/images/impact-performance-feedback/gallery-16.jpg", alt: "ผู้สังเกตการณ์ให้ข้อเสนอแนะผ่านไมโครโฟน" },
+];
 
 export default function ImpactPerformanceFeedbackPage() {
   return <>
@@ -83,7 +89,7 @@ export default function ImpactPerformanceFeedbackPage() {
 
       <section className="section trainer-learning-design feedback-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/impact-performance-feedback/learning-design-workshop.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="ผู้เข้าอบรมฝึกบทสนทนาและแลกเปลี่ยนมุมมองในกิจกรรม Performance Feedback" /><div><UserFocus /><span>Evidence <b>+</b> Empathy</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>ฝึกครบทั้งผู้ให้<br />ผู้รับ และผู้สังเกตการณ์</h2><p className="feedback-learning-intro">การฝึกแบบ Triad ช่วยให้ผู้เรียนเข้าใจผลของคำพูด น้ำเสียง คำถาม และภาษากายจากหลายมุมมอง พร้อมเห็นจุดที่ควรพัฒนาในบทสนทนาของตนเอง</p><div className="trainer-learning-block"><span><Presentation /></span><div><h3>Triad Feedback Practice</h3><p>สลับบทบาทผู้ให้การประเมิน ผู้ถูกประเมิน และผู้สังเกตการณ์ เพื่อฝึกใช้หลักฐาน รับฟังมุมมอง และสื่อสารคำแนะนำอย่างสร้างสรรค์</p></div></div><div className="trainer-learning-block"><span><Spark /></span><div><h3>Feedback on Feedback</h3><p>นำเครื่องมือ Feedback มาใช้สะท้อนการฝึกของเพื่อนร่วมคลาสอีกชั้นหนึ่ง ก่อนสรุปสิ่งที่ค้นพบเป็น Action Plan เฉพาะบุคคล</p></div></div></div></div></section>
 
-      <section className="story-photo-pair feedback-photo-pair"><div className="story-photo"><Image src="/images/impact-performance-feedback/gallery-09.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรสาธิตการฟังและสนทนาอย่างเข้าอกเข้าใจ" /><span>Evidence with empathy</span></div><div className="story-photo"><Image src="/images/impact-performance-feedback/gallery-04.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมร่วมกิจกรรมสะท้อนมุมมองอย่างเป็นกันเอง" /><span>Feedback that moves forward</span></div></section>
+      <section className="story-photo-pair feedback-photo-pair"><div className="story-photo"><Image src="/images/impact-performance-feedback/gallery-09.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรสาธิตการฟังและสนทนาอย่างเข้าอกเข้าใจ" /><span>Evidence with empathy</span></div><div className="story-photo"><Image src="/images/impact-performance-feedback/feedback-that-moves-forward.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมฝึกสนทนา Feedback กับวิทยากรหน้าชั้นเรียน" /><span>Feedback that moves forward</span></div></section>
 
       <section className="trainer-methods"><div className="container trainer-methods-grid"><div><p>TRAINING METHODS</p><h2>ทดลองบทสนทนาจริง<br />ก่อนนำกลับไปใช้กับทีม</h2></div><div className="trainer-method-cloud">{methods.map((method, index) => { const Icon = methodIcons[index]; return <span key={method}><Icon />{method}</span>; })}</div></div></section>
 

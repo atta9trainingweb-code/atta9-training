@@ -18,16 +18,16 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (user) redirect("/admin/contacts");
+    if (user) redirect("/admin/portfolio");
   }
 
   return (
     <main className="admin-login-page">
       <section className="admin-login-card">
         <Link className="admin-login-brand" href="/" aria-label="ATTA9 Training หน้าหลัก"><Image src="/images/atta9-logo.png" width={510} height={263} alt="ATTA9 Training" priority /></Link>
-        <p className="admin-eyebrow">CONTACT MANAGEMENT</p>
-        <h1>ระบบจัดการผู้สนใจ</h1>
-        <p className="admin-login-intro">เข้าสู่ระบบเพื่อดูและติดตามข้อมูลที่ส่งจากเว็บไซต์</p>
+        <p className="admin-eyebrow">ATTA9 CONTENT DESK</p>
+        <h1>ระบบหลังบ้าน</h1>
+        <p className="admin-login-intro">เข้าสู่ระบบเพื่อจัดการผลงาน Gallery และข้อมูลผู้สนใจ</p>
         {!configured || params.setup ? (
           <div className="admin-setup-notice">
             <strong>ยังไม่ได้เชื่อมต่อ Supabase</strong>

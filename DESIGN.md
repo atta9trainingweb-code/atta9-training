@@ -40,3 +40,9 @@ This file owns visual intent. Normative tokens live in `app/globals.css` under `
 ## Accessibility and motion
 
 WCAG 2.2 AA target, 44px minimum touch targets, visible focus rings, semantic controls, stable media aspect ratios, global visible scrollbars, and reduced-motion support.
+
+## Admin product register
+
+The authenticated admin is a restrained “Portfolio desk,” not a generic analytics dashboard. It keeps the public brand's navy, royal blue, Noto Sans Thai, and Inter utility labels, while using quieter light surfaces and denser spacing for operational work. A vertical story-progress rail is the signature on long editorial forms; imagery stays prominent wherever an editor chooses, orders, or reviews media.
+
+Admin controls use 10px radii, cards use 16px, and major editorial panels use 20px. Status is always communicated with text plus color. Draft and publish actions preserve the same labels across list and editor screens. Destructive actions must be visually separated and confirmed in an application-owned dialog.

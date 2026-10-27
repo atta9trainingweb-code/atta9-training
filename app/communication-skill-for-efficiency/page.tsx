@@ -46,10 +46,24 @@ const modules = [
 const methods = ["Attitude Opening", "Group Activity", "Game", "VDO", "Workshop", "Real Practice", "Coaching", "Reflection"];
 const methodIcons = [Spark, Users, Activity, Presentation, ClipboardCheck, UserFocus, Target, Graduation];
 
-const gallery = Array.from({ length: 10 }, (_, index) => ({
-  src: `/images/communication-efficiency/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt: `บรรยากาศหลักสูตร Communication Skills for Efficiency and Collaboration ภาพที่ ${index + 1}`,
-}));
+const gallery = [
+  ...Array.from({ length: 10 }, (_, index) => ({
+    src: `/images/communication-efficiency/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
+    alt: `บรรยากาศหลักสูตร Communication Skills for Efficiency and Collaboration ภาพที่ ${index + 1}`,
+  })),
+  {
+    src: "/images/communication-efficiency/gallery-11.jpg",
+    alt: "ผู้เข้าอบรมร่วมกิจกรรมฝึกการสื่อสารหน้าฟลิปชาร์ต",
+  },
+  {
+    src: "/images/communication-efficiency/gallery-12.jpg",
+    alt: "ผู้เข้าอบรมร่วมกิจกรรมกลุ่มเพื่อฝึกทักษะการสื่อสาร",
+  },
+  {
+    src: "/images/communication-efficiency/gallery-13.jpg",
+    alt: "ผู้เข้าอบรมนำเสนอผลการเรียนรู้ร่วมกันหน้าชั้นเรียน",
+  },
+];
 
 export default function CommunicationSkillForEfficiencyPage() {
   return <>
@@ -83,7 +97,7 @@ export default function CommunicationSkillForEfficiencyPage() {
 
       <section className="section trainer-learning-design communication-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/communication-efficiency/gallery-04.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="ผู้เข้าอบรมทำกิจกรรมกลุ่มเพื่อฝึกการสื่อสาร" /><div><Activity /><span>Learn <b>+</b> Practice</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>เปิดใจ ทดลองจริง<br />และเห็นมุมที่ต่างออกไป</h2><p className="communication-learning-intro">การเปลี่ยนวิธีสื่อสารเริ่มจากการเห็นพฤติกรรมของตนเอง หลักสูตรจึงออกแบบให้ผู้เรียนมีส่วนร่วม ลงมือฝึก และสะท้อนสิ่งที่ค้นพบในบรรยากาศที่สนุกและเป็นกันเอง</p><div className="trainer-learning-block"><span><Presentation /></span><div><h3>Practice-centered</h3><p>เรียนรู้ผ่านกิจกรรมกลุ่ม เกม วิดีโอ และ Workshop ที่หลากหลาย พร้อมฝึกปฏิบัติกับสถานการณ์ที่นำกลับไปใช้ในงานได้จริง</p></div></div><div className="trainer-learning-block"><span><UserFocus /></span><div><h3>Coaching &amp; Reflection</h3><p>ใช้กระบวนการ Coaching เพื่อช่วยให้ผู้เรียนมองเห็นทางเลือก ปรับปรุงตนเอง และวาง Action Plan สำหรับการพัฒนาอย่างยั่งยืน</p></div></div></div></div></section>
 
-      <section className="story-photo-pair communication-photo-pair"><div className="story-photo"><Image src="/images/communication-efficiency/gallery-03.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรและผู้เข้าอบรมทำกิจกรรมร่วมกัน" /><span>Connect with people</span></div><div className="story-photo"><Image src="/images/communication-efficiency/gallery-05.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมฝึกการสื่อสารในกิจกรรมกลุ่ม" /><span>Communicate with clarity</span></div></section>
+      <section className="story-photo-pair communication-photo-pair"><div className="story-photo"><Image src="/images/communication-efficiency/gallery-03.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรและผู้เข้าอบรมทำกิจกรรมร่วมกัน" /><span>Connect with people</span></div><div className="story-photo"><Image src="/images/communication-efficiency/communicate-with-clarity.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="ผู้เข้าอบรมร่วมฝึกการสื่อสารและแลกเปลี่ยนความคิดเห็นเป็นกลุ่ม" /><span>Communicate with clarity</span></div></section>
 
       <section className="trainer-methods"><div className="container trainer-methods-grid"><div><p>TRAINING METHODS</p><h2>เรียนรู้ผ่าน<br />การมีส่วนร่วม</h2></div><div className="trainer-method-cloud">{methods.map((method, index) => { const Icon = methodIcons[index]; return <span key={method}><Icon />{method}</span>; })}</div></div></section>
 

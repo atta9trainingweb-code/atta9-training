@@ -6,17 +6,13 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Arrow, Check, Spark, Target } from "@/components/icons";
 import { TrainerGallery } from "@/components/trainer-gallery";
-import { getPortfolioBySlug, getPublishedPortfolio } from "@/lib/portfolio";
+import { getPortfolioBySlug } from "@/lib/portfolio-cms";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return getPublishedPortfolio().map((project) => ({ slug: project.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getPortfolioBySlug(slug);
+  const project = await getPortfolioBySlug(slug);
   if (!project) return {};
   return {
     title: `${project.organization} — ${project.course} | ATTA9 Training`,
@@ -27,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PortfolioDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const project = getPortfolioBySlug(slug);
+  const project = await getPortfolioBySlug(slug);
   if (!project) notFound();
 
   const publishedDate = new Intl.DateTimeFormat("th-TH", {

@@ -15,20 +15,20 @@ const categories = ["Trainer Skills", "Leadership", "Communication", "Service Ex
 const courses = [
   { title: "Train the Professional Trainer", category: "Trainer Skills", image: "/images/courses/train-professional-trainer.jpg", description: "สร้างความมั่นใจในการก้าวสู่วิทยากรภายในองค์กร เข้าใจบทบาทของผู้สอนมืออาชีพ และออกแบบกระบวนการที่เอื้อต่อการเรียนรู้ของผู้เรียน", outcome: "พัฒนาวิทยากรภายในอย่างเป็นระบบ", href: "/train-the-professional-trainer" },
   { title: "Persuasive & Powerful Presentation", category: "Communication", image: "/images/courses/persuasive-presentation.jpg", description: "ยกระดับการนำเสนอให้โดนใจลูกค้าและผู้บริหาร เรียบเรียงข้อมูลให้เข้าใจง่าย พร้อมเสนอทางเลือกที่ช่วยขับเคลื่อนการตัดสินใจ", outcome: "นำเสนอชัดเจน น่าเชื่อถือ และโน้มน้าวใจ", href: "/persuasive-powerful-presentation" },
-  { title: "Leader as an Inspiring Coach", category: "Leadership", image: "/images/courses/inspiring-coach.jpg", description: "เสริมทักษะการบริหารคนสำหรับผู้นำยุคใหม่ ให้เก่งตน เก่งคน และเก่งงาน พร้อมพัฒนาศักยภาพของตนเองและทีมไปด้วยกัน", outcome: "เปลี่ยนหัวหน้าให้เป็นโค้ชที่สร้างแรงบันดาลใจ", href: "/leader-as-an-inspiring-coach" },
-  { title: "Communication Skills for Efficiency and Collaboration", category: "Communication", image: "/images/courses/communication-efficiency.jpg", description: "ลดปัญหาการประสานงานที่เกิดจากบรรยากาศและความเข้าใจไม่ตรงกัน สร้างการสื่อสารที่ช่วยให้ทีมทำงานร่วมกันได้อย่างราบรื่น", outcome: "ประสานงานคล่องขึ้นและเข้าใจตรงกัน", href: "/communication-skill-for-efficiency" },
-  { title: "Service Mind in Action", category: "Service Excellence", image: "/images/courses/service-mind.jpg", description: "พัฒนาทัศนคติและพฤติกรรมบริการให้ลูกค้าสัมผัสได้ถึงความกระตือรือร้น ความใส่ใจ และความพร้อมในการช่วยเหลืออย่างจริงใจ", outcome: "สร้างประสบการณ์บริการที่น่าประทับใจ", href: "/service-mind-in-action" },
-  { title: "Smart Personality for Professional Image", category: "Professional Image", image: "/images/courses/smart-personality.jpg", description: "เสริมความมั่นใจด้านบุคลิกภาพ การแต่งกาย และการวางตัว เพราะรายละเอียดเล็ก ๆ เหล่านี้สะท้อนภาพลักษณ์ความเป็นมืออาชีพขององค์กร", outcome: "เสริมบุคลิกและภาพลักษณ์ที่น่าเชื่อถือ", href: "/smart-personality-for-professional-image" },
-  { title: "Effective Complaint Handling", category: "Service Excellence", image: "/images/courses/complaint-handling.jpg", description: "สร้างสมดุลระหว่างทักษะและทัศนคติในการรับมือข้อร้องเรียน เพื่อเปลี่ยนสถานการณ์ที่ยากให้กลายเป็นโอกาสสร้างความเชื่อมั่น", outcome: "รับมือข้อร้องเรียนอย่างมืออาชีพ", href: "/effective-complaint-handling" },
+  { title: "Leader as an Inspiring Coach", category: "Leadership", image: "/images/courses/catalog-leader-inspiring-coach.jpg", description: "เสริมทักษะการบริหารคนสำหรับผู้นำยุคใหม่ ให้เก่งตน เก่งคน และเก่งงาน พร้อมพัฒนาศักยภาพของตนเองและทีมไปด้วยกัน", outcome: "เปลี่ยนหัวหน้าให้เป็นโค้ชที่สร้างแรงบันดาลใจ", href: "/leader-as-an-inspiring-coach" },
+  { title: "Communication Skills for Efficiency and Collaboration", category: "Communication", image: "/images/courses/catalog-communication-efficiency.jpg", description: "ลดปัญหาการประสานงานที่เกิดจากบรรยากาศและความเข้าใจไม่ตรงกัน สร้างการสื่อสารที่ช่วยให้ทีมทำงานร่วมกันได้อย่างราบรื่น", outcome: "ประสานงานคล่องขึ้นและเข้าใจตรงกัน", href: "/communication-skill-for-efficiency" },
+  { title: "Service Mind in Action", category: "Service Excellence", image: "/images/courses/catalog-service-mind.jpg", description: "พัฒนาทัศนคติและพฤติกรรมบริการให้ลูกค้าสัมผัสได้ถึงความกระตือรือร้น ความใส่ใจ และความพร้อมในการช่วยเหลืออย่างจริงใจ", outcome: "สร้างประสบการณ์บริการที่น่าประทับใจ", href: "/service-mind-in-action" },
+  { title: "Smart Personality for Professional Image", category: "Professional Image", image: "/images/courses/catalog-smart-personality.jpg", description: "เสริมความมั่นใจด้านบุคลิกภาพ การแต่งกาย และการวางตัว เพราะรายละเอียดเล็ก ๆ เหล่านี้สะท้อนภาพลักษณ์ความเป็นมืออาชีพขององค์กร", outcome: "เสริมบุคลิกและภาพลักษณ์ที่น่าเชื่อถือ", href: "/smart-personality-for-professional-image" },
+  { title: "Effective Complaint Handling", category: "Service Excellence", image: "/images/courses/catalog-effective-complaint-handling.jpg", description: "สร้างสมดุลระหว่างทักษะและทัศนคติในการรับมือข้อร้องเรียน เพื่อเปลี่ยนสถานการณ์ที่ยากให้กลายเป็นโอกาสสร้างความเชื่อมั่น", outcome: "รับมือข้อร้องเรียนอย่างมืออาชีพ", href: "/effective-complaint-handling" },
   { title: "Impact Performance Feedback", category: "Leadership", image: "/images/courses/performance-feedback.jpg", description: "ฝึกการให้ข้อมูลป้อนกลับที่ช่วยให้พนักงานเห็นตำแหน่งของตนเมื่อเทียบกับเป้าหมาย รู้สิ่งที่ควรทำต่อ และสิ่งที่ควรพัฒนา", outcome: "ให้ Feedback ที่ชัดเจนและนำไปพัฒนาต่อได้", href: "/impact-performance-feedback" },
   { title: "Persuasive and Powerful Storytelling for Leaders", category: "Leadership", image: "/images/courses/storytelling-leaders.jpg", description: "ใช้พลังของเรื่องเล่าเพื่อส่งต่อข้อคิด จุดประกายความฝัน และสร้างแรงบันดาลใจที่นำไปสู่การเปลี่ยนแปลงพฤติกรรม", outcome: "สื่อสารวิสัยทัศน์ผ่านเรื่องเล่าที่ทรงพลัง", href: "/persuasive-and-powerful-story-telling-for-leaders" },
-  { title: "Professional Facilitator", category: "Trainer Skills", image: "/images/courses/professional-facilitator.jpg", description: "พัฒนาทักษะวิทยากรกระบวนการที่ช่วยนำพาการเรียนรู้ กลั่นกรองความคิดเห็นของสมาชิก และตกผลึกเป็นองค์ความรู้ใหม่ร่วมกัน", outcome: "นำวงสนทนาและสร้างการมีส่วนร่วมอย่างมืออาชีพ", href: "/professional-facilitator" },
+  { title: "Professional Facilitator", category: "Trainer Skills", image: "/images/courses/catalog-professional-facilitator.jpg", description: "พัฒนาทักษะวิทยากรกระบวนการที่ช่วยนำพาการเรียนรู้ กลั่นกรองความคิดเห็นของสมาชิก และตกผลึกเป็นองค์ความรู้ใหม่ร่วมกัน", outcome: "นำวงสนทนาและสร้างการมีส่วนร่วมอย่างมืออาชีพ", href: "/professional-facilitator" },
 ];
 
-const courseImageFocus = [
-  "48% 28%", "50% 28%", "84% 28%", "30% 28%", "14% 28%",
-  "55% 28%", "16% 28%", "30% 28%", "11% 28%", "78% 28%",
-];
+const categoryCounts = categories.map((category) => ({
+  label: category,
+  count: courses.filter((course) => course.category === category).length,
+}));
 
 export default function TrainingProgramPage() {
   return <>
@@ -55,11 +55,38 @@ export default function TrainingProgramPage() {
       <section className="section training-catalog" id="all-courses">
         <div className="container">
           <div className="training-catalog-head"><div><p className="eyebrow"><span/>TRAINING PROGRAMS</p><h2>เลือกหลักสูตรที่ตอบโจทย์ทีมของคุณ</h2></div><p>ครอบคลุมทักษะที่จำเป็นต่อการทำงาน ตั้งแต่การสื่อสาร ภาวะผู้นำ การพัฒนาวิทยากร ไปจนถึงการบริการอย่างมืออาชีพ</p></div>
-          <div className="category-row" aria-label="หมวดหมู่หลักสูตร">{categories.map((category, index) => <span className={index === 0 ? "is-primary" : ""} key={category}>{category}</span>)}</div>
-          <div className="course-grid">{courses.map((course, index) => <article className="course-card" key={course.title}>
-            <div className="course-card-media"><Image src={course.image} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 33vw" style={{ objectPosition: courseImageFocus[index] }} alt={`ภาพประกอบหลักสูตร ${course.title}`}/><span>{course.category}</span><small>{String(index + 1).padStart(2,"0")}</small></div>
-            <div className="course-card-body"><h2>{course.title}</h2><p>{course.description}</p><div className="course-outcome"><Target/><span><small>KEY OUTCOME</small>{course.outcome}</span></div><Link href={course.href ?? "/#contact"} aria-label={`${course.href ? "ดู" : "ขอ"}รายละเอียดหลักสูตร ${course.title}`}>{course.href ? "ดูรายละเอียดหลักสูตร" : "ขอรายละเอียดหลักสูตร"} <Arrow/></Link></div>
-          </article>)}</div>
+          <div className="course-catalog-layout">
+            <div className="course-grid course-grid--list">{courses.map((course, index) => <article className="course-card" key={course.title}>
+              <div className="course-card-media"><Image src={course.image} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 38vw, 330px" alt={`ภาพประกอบหลักสูตร ${course.title}`}/></div>
+              <div className="course-card-body">
+                <div className="course-card-meta"><span>{course.category}</span><small>PROGRAM {String(index + 1).padStart(2,"0")}</small></div>
+                <h2>{course.title}</h2><p>{course.description}</p>
+                <div className="course-card-actions"><div className="course-outcome"><Target/><span><small>KEY OUTCOME</small>{course.outcome}</span></div><Link href={course.href ?? "/#contact"} aria-label={`${course.href ? "ดู" : "ขอ"}รายละเอียดหลักสูตร ${course.title}`}>{course.href ? "ดูรายละเอียดหลักสูตร" : "ขอรายละเอียดหลักสูตร"} <Arrow/></Link></div>
+              </div>
+            </article>)}</div>
+
+            <aside className="course-sidebar" aria-label="ข้อมูลช่วยเลือกหลักสูตร">
+              <div className="course-sidebar-card">
+                <p className="course-sidebar-eyebrow">QUICK GUIDE</p>
+                <h3>วางแผนหลักสูตรให้เหมาะกับทีมของคุณ</h3>
+                <div className="course-sidebar-facts">
+                  <div><Target/><span><small>รูปแบบการอบรม</small>In-house Training</span></div>
+                  <div><Spark/><span><small>ปรับให้เข้ากับองค์กร</small>เนื้อหา กิจกรรม และกรณีศึกษา</span></div>
+                  <div><Check/><span><small>หลักสูตรพร้อมใช้</small>{courses.length} หลักสูตรหลัก</span></div>
+                </div>
+                <div className="course-sidebar-categories">
+                  <p>หมวดทักษะ</p>
+                  {categoryCounts.map((category) => <div key={category.label}><span>{category.label}</span><strong>{category.count}</strong></div>)}
+                </div>
+                <div className="course-sidebar-contact">
+                  <h4>ยังไม่แน่ใจว่าจะเลือกอะไร?</h4>
+                  <p>เล่าโจทย์และกลุ่มผู้เรียนให้ทีมงานช่วยแนะนำหลักสูตรที่เหมาะสมได้</p>
+                  <Link className="button" href="/#contact">ขอคำแนะนำ <Arrow/></Link>
+                  <a href="tel:0897896591">089-789-6591</a>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

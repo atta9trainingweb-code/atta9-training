@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { logout } from "../actions";
+import { AdminHeader } from "@/components/admin-header";
 import {
   contactStatuses,
   contactStatusLabels,
@@ -65,13 +64,7 @@ export default async function ContactsPage({ searchParams }: ContactsPageProps) 
 
   return (
     <main className="admin-shell">
-      <header className="admin-header">
-        <Link className="admin-logo" href="/admin/contacts"><Image src="/images/atta9-logo-on-dark.png" width={510} height={263} alt="ATTA9 Training" priority /></Link>
-        <div className="admin-account">
-          <span>{admin.display_name || user.email}</span>
-          <form action={logout}><button type="submit">ออกจากระบบ</button></form>
-        </div>
-      </header>
+      <AdminHeader displayName={admin.display_name || user.email || "ผู้ดูแลระบบ"} active="contacts" />
 
       <div className="admin-content">
         <div className="admin-page-heading">
@@ -87,7 +80,7 @@ export default async function ContactsPage({ searchParams }: ContactsPageProps) 
         </section>
 
         <section className="admin-panel">
-          <form className="admin-filters" method="get">
+          <form className="admin-filters" method="get" noValidate>
             <label>
               <span className="sr-only">ค้นหา</span>
               <input name="q" defaultValue={q} placeholder="ค้นหาชื่อ บริษัท อีเมล เบอร์โทร หรือหัวข้อ" />

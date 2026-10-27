@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { Activity, Arrow, BookOpen, Briefcase, Building, Check, Graduation, Headset, Messages, Presentation, Spark, Target, UserFocus, Users } from "@/components/icons";
+import { Activity, Arrow, BookOpen, Briefcase, Building, Check, Graduation, Headset, Messages, Presentation, Spark, UserFocus, Users } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Trainer Profile — อ.พากร อัตตนนท์ | ATTA9 Training",

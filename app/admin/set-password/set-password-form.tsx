@@ -83,7 +83,7 @@ export function SetPasswordForm() {
   }
 
   return (
-    <form className="admin-login-form" onSubmit={handleSubmit}>
+    <form className="admin-login-form" onSubmit={handleSubmit} noValidate>
       <div>
         <label htmlFor="new-password">รหัสผ่านใหม่</label>
         <input id="new-password" name="password" type="password" autoComplete="new-password" minLength={8} disabled={!ready || pending} required />

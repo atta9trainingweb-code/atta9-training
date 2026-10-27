@@ -49,12 +49,17 @@ const methods = ["Ice Breaking", "Group Activity", "Role Play", "Skill Practice"
 const methodIcons = [Spark, Users, UserFocus, Target, Activity, Presentation, Users, Activity, Presentation, BookOpen, ClipboardCheck];
 
 const gallery = [
-  ...Array.from({ length: 10 }, (_, index) => ({
-    src: `/images/professional-facilitator/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-    alt: `บรรยากาศหลักสูตร Professional Facilitator ภาพที่ ${index + 1}`,
+  ...[1, 2, 5, 6, 10].map((imageNumber) => ({
+    src: `/images/professional-facilitator/gallery-${String(imageNumber).padStart(2, "0")}.jpg`,
+    alt: `บรรยากาศหลักสูตร Professional Facilitator ภาพที่ ${imageNumber}`,
   })),
   { src: "/images/professional-facilitator/gallery-11.webp", alt: "กิจกรรมฝึกใช้เครื่องมือของวิทยากรกระบวนการ" },
   { src: "/images/professional-facilitator/gallery-12.jpg", alt: "ผู้เข้าอบรมร่วมกิจกรรมเพื่อถอดบทเรียนและตกผลึกความรู้" },
+  { src: "/images/professional-facilitator/gallery-13.jpg", alt: "ผู้เข้าอบรมฝึกสนทนาและบันทึกวิดีโอระหว่างกิจกรรม" },
+  { src: "/images/professional-facilitator/gallery-14.jpg", alt: "วิทยากรสาธิตการนำกระบวนการร่วมกับผู้เข้าอบรม" },
+  { src: "/images/professional-facilitator/gallery-15.jpg", alt: "ผู้เข้าอบรมร่วมออกแบบกิจกรรมเป็นกลุ่มบนพื้นห้องเรียน" },
+  { src: "/images/professional-facilitator/gallery-16.jpg", alt: "ผู้เข้าอบรมฝึกนำวงสนทนาและแลกเปลี่ยนความคิดเห็น" },
+  { src: "/images/professional-facilitator/gallery-17.jpg", alt: "ผู้เข้าอบรมทำงานร่วมกันโดยมีวิทยากรให้คำแนะนำ" },
 ];
 
 export default function ProfessionalFacilitatorPage() {
@@ -87,7 +92,7 @@ export default function ProfessionalFacilitatorPage() {
 
       <section className="section trainer-curriculum facilitator-curriculum" id="curriculum"><div className="container"><div className="trainer-section-head trainer-section-head--light"><div><p className="eyebrow"><span />COURSE CURRICULUM</p><h2>จากการออกแบบวงสนทนา<br />สู่การตกผลึกที่นำไปใช้ได้จริง</h2></div><p>เรียนรู้ 4 แกนสำคัญ ตั้งแต่การเลือก Facilitative Process และ Tools ไปจนถึง Debriefing, Crystallization และการสร้างบรรยากาศที่ทุกคนพร้อมมีส่วนร่วม</p></div><TrainerCurriculum modules={modules} /></div></section>
 
-      <section className="section trainer-learning-design facilitator-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo"><Image src="/images/professional-facilitator/gallery-03.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="ผู้เข้าอบรมทำกิจกรรมกลุ่มในกระบวนการเรียนรู้" /><div><UserFocus /><span>Process <b>+</b> Presence</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>เรียนรู้ด้วยการเป็น<br />Facilitator จริงในห้อง</h2><p className="facilitator-learning-intro">ผู้เรียนจะได้สัมผัสกระบวนการหลากหลายด้วยตนเอง ก่อนออกแบบและนำกระบวนการเสมือนจริง เพื่อให้เข้าใจทั้งมุมของผู้นำกลุ่ม สมาชิก และผู้สังเกตการณ์</p><div className="trainer-learning-block"><span><Activity /></span><div><h3>Facilitation Simulation</h3><p>ฝึกนำกระบวนการหน้าคลาสกับผู้เข้าร่วมกลุ่มใหญ่ ใช้กิจกรรมและเครื่องมือจริง พร้อมบันทึกวิดีโอเพื่อทบทวนวิธีสร้างการมีส่วนร่วม</p></div></div><div className="trainer-learning-block"><span><Spark /></span><div><h3>Feedback &amp; Coaching</h3><p>รับ Feedback รายบุคคลจากผู้สอนและเพื่อนร่วมกลุ่ม ใช้คำถาม Coaching เพื่อประเมินตนเองและสร้างแผนพัฒนาที่นำไปใช้ต่อได้</p></div></div></div></div></section>
+      <section className="section trainer-learning-design facilitator-learning"><div className="container trainer-learning-layout"><div className="trainer-learning-photo trainer-learning-photo--full-frame"><Image src="/images/professional-facilitator/learning-design-facilitation.jpg" fill sizes="(max-width: 900px) 100vw, 45vw" alt="วิทยากรสาธิตกระบวนการให้ผู้เข้าอบรมมีส่วนร่วมในชั้นเรียน" /><div><UserFocus /><span>Process <b>+</b> Presence</span></div></div><div><p className="eyebrow"><span />LEARNING DESIGN</p><h2>เรียนรู้ด้วยการเป็น<br />Facilitator จริงในห้อง</h2><p className="facilitator-learning-intro">ผู้เรียนจะได้สัมผัสกระบวนการหลากหลายด้วยตนเอง ก่อนออกแบบและนำกระบวนการเสมือนจริง เพื่อให้เข้าใจทั้งมุมของผู้นำกลุ่ม สมาชิก และผู้สังเกตการณ์</p><div className="trainer-learning-block"><span><Activity /></span><div><h3>Facilitation Simulation</h3><p>ฝึกนำกระบวนการหน้าคลาสกับผู้เข้าร่วมกลุ่มใหญ่ ใช้กิจกรรมและเครื่องมือจริง พร้อมบันทึกวิดีโอเพื่อทบทวนวิธีสร้างการมีส่วนร่วม</p></div></div><div className="trainer-learning-block"><span><Spark /></span><div><h3>Feedback &amp; Coaching</h3><p>รับ Feedback รายบุคคลจากผู้สอนและเพื่อนร่วมกลุ่ม ใช้คำถาม Coaching เพื่อประเมินตนเองและสร้างแผนพัฒนาที่นำไปใช้ต่อได้</p></div></div></div></div></section>
 
       <section className="story-photo-pair facilitator-photo-pair"><div className="story-photo"><Image src="/images/professional-facilitator/gallery-01.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="วิทยากรนำกิจกรรมที่สร้างการมีส่วนร่วมอย่างเป็นกันเอง" /><span>Create participation</span></div><div className="story-photo"><Image src="/images/professional-facilitator/gallery-05.jpg" fill sizes="(max-width: 767px) 100vw, 50vw" alt="สมาชิกกลุ่มร่วมกันแลกเปลี่ยนและตกผลึกความรู้" /><span>Crystallize learning</span></div></section>
 

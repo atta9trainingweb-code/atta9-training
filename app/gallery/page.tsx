@@ -5,7 +5,9 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Arrow, Spark } from "@/components/icons";
 import { WorkGallery } from "@/components/work-gallery";
-import { getPublishedPortfolio } from "@/lib/portfolio";
+import { getPublishedPortfolio } from "@/lib/portfolio-cms";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "ผลงานการอบรมองค์กร | ATTA9 Training",
@@ -17,8 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function GalleryPage() {
-  const projects = getPublishedPortfolio();
+export default async function GalleryPage() {
+  const projects = await getPublishedPortfolio();
 
   return <>
     <Header />

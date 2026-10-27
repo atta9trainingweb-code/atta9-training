@@ -36,10 +36,15 @@ const modules = [
 const methods = ["Triad Practice", "Storytelling Practice", "Individual Feedback", "Coaching", "Ice Breaking", "Intention Setting", "VDO Clip", "Music", "Game", "Group Activity"];
 const methodIcons = [Users, Presentation, UserFocus, Target, Spark, Activity, Presentation, Spark, Activity, Users];
 
-const gallery = Array.from({ length: 12 }, (_, index) => ({
-  src: `/images/storytelling-leaders/gallery-${String(index + 1).padStart(2, "0")}${index === 10 ? ".webp" : ".jpg"}`,
-  alt: `บรรยากาศการฝึกเล่าเรื่องสำหรับผู้นำ ภาพที่ ${index + 1}`,
-}));
+const gallery = [
+  ...[1, 3, 4, 5, 9, 10, 11, 12].map((imageNumber) => ({
+    src: `/images/storytelling-leaders/gallery-${String(imageNumber).padStart(2, "0")}${imageNumber === 11 ? ".webp" : ".jpg"}`,
+    alt: `บรรยากาศการฝึกเล่าเรื่องสำหรับผู้นำ ภาพที่ ${imageNumber}`,
+  })),
+  { src: "/images/storytelling-leaders/gallery-13.jpg", alt: "ผู้เข้าอบรมฝึกนำเสนอเรื่องราวหน้าฟลิปชาร์ต" },
+  { src: "/images/storytelling-leaders/gallery-14.jpg", alt: "ผู้เข้าอบรมฝึกเล่าเรื่องและบันทึกวิดีโอเพื่อรับข้อเสนอแนะ" },
+  { src: "/images/storytelling-leaders/gallery-15.jpg", alt: "ผู้เข้าอบรมฝึกเล่าเรื่องต่อหน้าชั้นเรียน" },
+];
 
 export default function StoryTellingForLeadersPage() {
   return <>

@@ -54,7 +54,7 @@ export function ContactForm() {
   return <form className="contact-form" noValidate onSubmit={submit}>
     <div className="field-grid">{field("name", "ชื่อ–นามสกุล", "text", "name")}{field("company", "องค์กร", "text", "organization")}{field("email", "อีเมลธุรกิจ", "email", "email")}{field("phone", "เบอร์โทรศัพท์", "tel", "tel")}</div>
     {field("topic", "หัวข้อที่สนใจ")}
-    <div className="field"><label htmlFor="message">รายละเอียดความต้องการ <span>(ไม่บังคับ)</span></label><textarea id="message" name="message" rows={4}/></div>
+    <div className="field"><label htmlFor="message">รายละเอียดความต้องการ <span>(ไม่บังคับ)</span></label><textarea className="resize-none" id="message" name="message" rows={4}/></div>
     <div className="consent"><input id="consent" name="consent" type="checkbox" aria-invalid={Boolean(errors.consent)} aria-describedby={errors.consent ? "consent-error" : undefined}/><label htmlFor="consent">ฉันรับทราบว่าข้อมูลจะใช้เพื่อการติดต่อกลับเกี่ยวกับบริการฝึกอบรม <em>*</em></label></div>
     {errors.consent && <p id="consent-error" className="field-error">{errors.consent}</p>}
     {submitError && <p className="form-submit-error" role="alert">{submitError}</p>}

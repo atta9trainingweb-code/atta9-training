@@ -1,15 +1,16 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { login, type LoginState } from "../actions";
 
 const initialState: LoginState = undefined;
 
 export function LoginForm() {
   const [state, action, pending] = useActionState(login, initialState);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <form className="admin-login-form" action={action}>
+    <form className="admin-login-form" action={action} noValidate>
       <div>
         <label htmlFor="admin-email">อีเมล</label>
         <input
@@ -23,13 +24,16 @@ export function LoginForm() {
       </div>
       <div>
         <label htmlFor="admin-password">รหัสผ่าน</label>
-        <input
-          id="admin-password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-        />
+        <div className="admin-password-field">
+          <input
+            id="admin-password"
+            name="password"
+            type={showPassword ? "text" : "password"}
+            autoComplete="current-password"
+            required
+          />
+          <button type="button" aria-pressed={showPassword} aria-label={showPassword ? "ซ่อนรหัสผ่าน" : "แสดงรหัสผ่าน"} onClick={() => setShowPassword((visible) => !visible)}>{showPassword ? "ซ่อน" : "แสดง"}</button>
+        </div>
       </div>
       {state?.error && <p className="admin-form-error" role="alert">{state.error}</p>}
       <button className="admin-primary-button" type="submit" disabled={pending}>
